@@ -5,13 +5,8 @@
 ![GitHub forks](https://img.shields.io/github/forks/cliffordx/24-Months-AI-Course-Bootcamp?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/cliffordx/24-Months-AI-Course-Bootcamp?style=social)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
-Here is the `README.md` file tailored for your GitHub repository. It follows the structure of your attached example, incorporates the **AIMA 4th Edition** focus, and organizes the curriculum into the **4 Phases** defined in your visual roadmap.
 
-I have corrected the minor formatting artifacts (like `!` instead of `/` or `:`) found in the filenames from your screenshots to ensure professional presentation.
 
-***
-
-```markdown
 # 24 Months Artificial Intelligence (AI) Course Bootcamp (104 Weeks)
 
 ![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=flat-square)
