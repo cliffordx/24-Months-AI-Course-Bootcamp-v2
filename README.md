@@ -4,9 +4,9 @@
 ![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=flat-square)
 ![Duration](https://img.shields.io/badge/Duration-24%20Months-orange?style=flat-square)
 ![Focus](https://img.shields.io/badge/Focus-AIMA%204th%20Edition-green?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/cliffordx/24-Months-AI-Course-Bootcamp?style=social)
-![GitHub forks](https://img.shields.io/github/forks/cliffordx/24-Months-AI-Course-Bootcamp?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/cliffordx/24-Months-AI-Course-Bootcamp?style=social)
+![GitHub stars](https://img.shields.io/github/stars/cliffordx/24-Months-AI-Course-Bootcamp-v2?style=social)
+![GitHub forks](https://img.shields.io/github/forks/cliffordx/24-Months-AI-Course-Bootcamp-v2?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/cliffordx/24-Months-AI-Course-Bootcamp-v2?style=social)
 
 A comprehensive, self-paced AI bootcamp curriculum based on the **Artificial Intelligence: A Modern Approach (4th Edition)** textbook. This roadmap covers the full spectrum of AI, from classical search and logic to modern deep learning, reinforcement learning, and Large Language Model (LLM) agents.
 
