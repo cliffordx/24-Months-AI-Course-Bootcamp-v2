@@ -1,5 +1,5 @@
 
-# 🎓 24 Months Artificial Intelligence (AI) Course Bootcamp (104 Weeks)
+# 🎓 24 Months (104 Weeks) Artificial Intelligence (AI) Course Bootcamp
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=flat-square)
 ![Duration](https://img.shields.io/badge/Duration-24%20Months-orange?style=flat-square)
