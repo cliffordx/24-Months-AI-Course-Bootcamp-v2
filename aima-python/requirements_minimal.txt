@@ -1,0 +1,8 @@
+numpy
+ipython
+ipythonblocks
+jupyter
+matplotlib
+ipywidgets
+pillow
+qpsolvers
