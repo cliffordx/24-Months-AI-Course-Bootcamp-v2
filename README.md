@@ -164,7 +164,7 @@ This curriculum is structured into **4 Phases** spanning 104 weeks. It balances 
 ## 🛠️ Tools & Technologies
 - **Languages:** Python
 - **Key Libraries:** `aima-python` (Official Repo), `numpy`, `scikit-learn`, `pytorch` / `tensorflow`, `opencv`, `nltk` / `spacy`.
-- **IDE:** VS Code with Jupyter Notebooks.
+- **IDE:** ~~VS Code~~ AntiGravity with Jupyter Notebooks.
 - **Environment:** Conda / Virtualenv.
 
 
