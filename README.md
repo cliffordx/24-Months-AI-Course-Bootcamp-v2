@@ -205,3 +205,5 @@ By using this repository, you acknowledge that the content is not for commercial
 
 ## 📝 Changelog
 -**[Wednesday, December 3, 2025; 10:55:44]**: first draft upload
+-**[Thursday, December 5, 2025; 19:13:14]**: updated README.md; added aima-python workbook, and "My Study Notes" folder.
+
