@@ -4,7 +4,7 @@ import copy
 from collections import defaultdict
 from statistics import stdev
 
-from qpsolvers import solve_qp
+
 
 from probabilistic_learning import NaiveBayesLearner
 from utils import *
@@ -847,6 +847,7 @@ class SVC:
         :param y: array of size [n_samples] holding the class labels
         """
         m = len(y)  # m = n_samples
+        from qpsolvers import solve_qp
         self.K = self.kernel(X)  # gram matrix
         P = self.K * np.outer(y, y)
         q = -np.ones(m)
@@ -918,6 +919,7 @@ class SVR:
         """
         #
         m = len(y)  # m = n_samples
+        from qpsolvers import solve_qp
         self.K = self.kernel(X)  # gram matrix
         P = np.vstack((np.hstack((self.K, -self.K)),  # alphas_p, alphas_n
                        np.hstack((-self.K, self.K))))  # alphas_n, alphas_p
