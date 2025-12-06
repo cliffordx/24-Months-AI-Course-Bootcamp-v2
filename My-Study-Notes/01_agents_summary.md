@@ -144,32 +144,32 @@ Table-Driven → Simple Reflex → Model-Based Reflex → Goal-Based → Utility
 ```
 
 ### 1. Table-Driven Agent (Figure 2.7)
-**Location**: [`agents.py` lines 118-133](aima-python/agents.py#L118-L133)
+**Location**: [`agents.py` lines 118-133](/aima-python/agents.py#L118-L133)
 
 - **Mechanism**: Stores **entire percept history**, looks up action in a giant table.
 - **Limitation**: Table size grows **exponentially** with history length.
-- **Example**: [`TableDrivenVacuumAgent`](aima-python/agents.py#L209-L228)
+- **Example**: [`TableDrivenVacuumAgent`](/aima-python/agents.py#L209-L228)
 
 ### 2. Simple Reflex Agent (Figure 2.10)
-**Location**: [`agents.py` lines 153-165](aima-python/agents.py#L153-L165)
+**Location**: [`agents.py` lines 153-165](/aima-python/agents.py#L153-L165)
 
 - **Mechanism**: Maps **current percept → action** using condition-action rules.
 - **No memory**: Cannot handle partially observable environments.
-- **Example**: [`ReflexVacuumAgent`](aima-python/agents.py#L231-L252) — If dirty → Suck; else move.
+- **Example**: [`ReflexVacuumAgent`](/aima-python/agents.py#L231-L252) — If dirty → Suck; else move.
 
 ### 3. Model-Based Reflex Agent (Figure 2.12)
-**Location**: [`agents.py` lines 168-181](aima-python/agents.py#L168-L181)
+**Location**: [`agents.py` lines 168-181](/aima-python/agents.py#L168-L181)
 
 - **Mechanism**: Maintains **internal state** (model of the world).
 - **Advantage**: Knows when to **stop** (e.g., all squares clean → NoOp).
-- **Example**: [`ModelBasedVacuumAgent`](aima-python/agents.py#L255-L279) — Remembers which squares are clean.
+- **Example**: [`ModelBasedVacuumAgent`](/aima-python/agents.py#L255-L279) — Remembers which squares are clean.
 
 ### 4. Goal-Based Agent (Figure 3.1)
-**Location**: [`search.py` lines 92-127](aima-python/search.py#L92-L127)
+**Location**: [`search.py` lines 92-127](/aima-python/search.py#L92-L127)
 
 - **Mechanism**: Uses **search/planning** to find action sequences.
 - **Key steps**: `formulate_goal()` → `formulate_problem()` → `search()` → Execute plan.
-- **Example**: [`SimpleProblemSolvingAgentProgram`](aima-python/search.py#L92-L127)
+- **Example**: [`SimpleProblemSolvingAgentProgram`](/aima-python/search.py#L92-L127)
 
 ### Agent Comparison Results (Vacuum World Test)
 | Agent | Score | Behavior |
@@ -214,6 +214,6 @@ Table-Driven → Simple Reflex → Model-Based Reflex → Goal-Based → Utility
 
 ### 4. Next Steps 🧭
 - **Topic**: Search Algorithms (Solving problems by finding path sequences).
-- **Notebook**: [`search.ipynb`](aima-python/search.ipynb).
+- **Notebook**: [`search.ipynb`](/aima-python/search.ipynb).
 - **Goal**: Stop wandering randomly and start **planning** efficient paths.
 
