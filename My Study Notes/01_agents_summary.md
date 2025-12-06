@@ -132,16 +132,66 @@ When the program prints `[[...], [...], [...], [...], [...]]`, it is showing you
 
 ---
 
+## 4. Phase 4: Advanced Agent Architectures
+**Goal**: Understand the progression from simple to sophisticated agent designs.
+
+### Agent Architecture Hierarchy (AIMA Figures 2.7 - 3.1)
+
+```
+Table-Driven → Simple Reflex → Model-Based Reflex → Goal-Based → Utility-Based
+    ↓               ↓                  ↓                  ↓              ↓
+ (Memory)       (Rules)           (Internal State)    (Planning)    (Optimization)
+```
+
+### 1. Table-Driven Agent (Figure 2.7)
+**Location**: [`agents.py` lines 118-133](aima-python/agents.py#L118-L133)
+
+- **Mechanism**: Stores **entire percept history**, looks up action in a giant table.
+- **Limitation**: Table size grows **exponentially** with history length.
+- **Example**: [`TableDrivenVacuumAgent`](aima-python/agents.py#L209-L228)
+
+### 2. Simple Reflex Agent (Figure 2.10)
+**Location**: [`agents.py` lines 153-165](aima-python/agents.py#L153-L165)
+
+- **Mechanism**: Maps **current percept → action** using condition-action rules.
+- **No memory**: Cannot handle partially observable environments.
+- **Example**: [`ReflexVacuumAgent`](aima-python/agents.py#L231-L252) — If dirty → Suck; else move.
+
+### 3. Model-Based Reflex Agent (Figure 2.12)
+**Location**: [`agents.py` lines 168-181](aima-python/agents.py#L168-L181)
+
+- **Mechanism**: Maintains **internal state** (model of the world).
+- **Advantage**: Knows when to **stop** (e.g., all squares clean → NoOp).
+- **Example**: [`ModelBasedVacuumAgent`](aima-python/agents.py#L255-L279) — Remembers which squares are clean.
+
+### 4. Goal-Based Agent (Figure 3.1)
+**Location**: [`search.py` lines 92-127](aima-python/search.py#L92-L127)
+
+- **Mechanism**: Uses **search/planning** to find action sequences.
+- **Key steps**: `formulate_goal()` → `formulate_problem()` → `search()` → Execute plan.
+- **Example**: [`SimpleProblemSolvingAgentProgram`](aima-python/search.py#L92-L127)
+
+### Agent Comparison Results (Vacuum World Test)
+| Agent | Score | Behavior |
+|-------|-------|----------|
+| **Random** | 5 | Wanders, eventually cleans |
+| **Reflex** | **-10** | ⚠️ Bounces Left↔Right forever |
+| **Model-Based** | **9** | ✅ Cleans, then stops with NoOp |
+
+> [!IMPORTANT]
+> The Reflex Agent got the **worst** score because it has **no memory**. Even when both squares are clean, it keeps moving, losing 1 point per move.
+
+---
+
 ## 🎓 Executive Summary: Intelligent Agents
 
 ### 1. Agent Comparison Table
-| Feature | **Blind Dog** 🐕 | **Energetic Blind Dog** 🏃 | **Wumpus Explorer** 🤠 |
-| :--- | :--- | :--- | :--- |
-| **Logic** | Fixed Sequence (Down, Eat..) | Random / Stochastic | Mental Model (You!) |
-| **Environment** | 1D Park | 2D Park | Wumpus Cave (4x4) |
-| **Sensors** | Location Concept | Food, Water, Bump | Stench, Breeze, Glitter, Bump, Scream |
-| **Actuators** | Move, Drink | Move, Turn, Eat, Drink | Move, Turn, Grab, Shoot, Climb |
-| **Key Lesson** | Hardcoded vs Dynamic | Randomness != Intelligence | Reasoning under Uncertainty |
+| Feature | **Blind Dog** 🐕 | **Energetic Blind Dog** 🏃 | **Wumpus Explorer** 🤠 | **Goal-Based** 🎯 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Logic** | Fixed Sequence | Random / Stochastic | Mental Model (You!) | Planning / Search |
+| **Environment** | 1D Park | 2D Park | Wumpus Cave (4x4) | Problem Space |
+| **Memory** | None | None | You track it! | Internal model + Plan |
+| **Key Lesson** | Hardcoded limits | Randomness ≠ Intelligence | Reasoning under Uncertainty | **Planning beats reacting** |
 
 ### 2. Key Concepts Mastered (Glossary)
 - **Agent Program**: The internal function `f(percept) = action` that maps what the agent sees to what it does.
@@ -152,15 +202,18 @@ When the program prints `[[...], [...], [...], [...], [...]]`, it is showing you
 - **Static vs. Dynamic**:
     - *Static*: The world doesn't change while you think (Wumpus World).
     - *Dynamic*: The world changes (e.g., a self-driving car).
+- **Goal-Based Planning**: Formulate goal → Define problem → Search for solution → Execute plan.
 
 ### 3. Skills Acquired ✅
 - [x] **Code Analysis**: Dissected `Agent` and `Environment` classes in `agents.py`.
 - [x] **Debugging**: Diagnosed "spinning" behavior using trace logs.
 - [x] **Visualization Decoding**: Learned to map logs `[x,y]` to visual grids `[row,col]`.
 - [x] **Game Theory**: Played a partial information game (Wumpus) using sensor inference.
-- [x] **Workflow**: Validated Environment Setup -> Agent Init -> Step execution.
+- [x] **Workflow**: Validated Environment Setup → Agent Init → Step execution.
+- [x] **Agent Architectures**: Compared Table-Driven, Reflex, Model-Based, and Goal-Based agents.
 
 ### 4. Next Steps 🧭
 - **Topic**: Search Algorithms (Solving problems by finding path sequences).
-- **Notebook**: `search.ipynb`.
+- **Notebook**: [`search.ipynb`](aima-python/search.ipynb).
 - **Goal**: Stop wandering randomly and start **planning** efficient paths.
+
