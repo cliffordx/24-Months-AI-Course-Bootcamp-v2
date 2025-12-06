@@ -130,7 +130,7 @@ FILE PATH FORMATTING (For GitHub PR Compatibility)
 
 When creating or editing files in "My Study Notes" folder or any content intended for GitHub PRs:
 - **DO NOT use absolute paths** like `file:///Users/usernameredacted/Documents/GitHub/24-Months-AI-Course-Bootcamp-v2/...`
-- **USE relative paths** from the repository root, e.g., `aima-python/agents.py#L118-L133`
+- **USE relative paths** from the repository root, e.g., `/aima-python/agents.py#L118-L133`
 - This ensures links work correctly when pushed to remote GitHub repositories.
 
 =====================================================================
